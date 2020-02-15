@@ -9,7 +9,7 @@ This app is a digital flashcard with a question and answer. Users can tap on the
 
 ### App Walk-though
 
-<img src="http://g.recordit.co/iC3NssYQSu.gif" width=200><br>
+<img src="http://g.recordit.co/QgIdEVlc9G.gif" width=200><br>
 
 
 ## Required
@@ -19,6 +19,6 @@ This app is a digital flashcard with a question and answer. Users can tap on the
 - [x] Build in logic to show the answer side when the card is tapped
 - [x] Push code to GitHub
 ## Optional
-- [ ] Toggle the flashcard between the question side and the answer side
-- [ ] Style the question and answer side of the card to better distinguish between the two sides
-- [ ] Add selectable multiple choice answers beneath the card
+- [x] Toggle the flashcard between the question side and the answer side
+- [x] Style the question and answer side of the card to better distinguish between the two sides
+- [x] Add selectable multiple choice answers beneath the card
