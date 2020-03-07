@@ -9,7 +9,7 @@ This app is a digital flashcard with a question and answer. Users can tap on the
 
 ### App Walk-though
 
-<img src="http://g.recordit.co/QgIdEVlc9G.gif" width=200><br>
+<img src="http://g.recordit.co/KUCbfRLv1D.gif" width=200><br>
 
 
 ## Required
