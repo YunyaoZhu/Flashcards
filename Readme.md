@@ -2,6 +2,24 @@
 
 📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
 
+## Lab 2
+
+### App Description
+This app is a digital flashcard with a question and answers. Users can tap on the question to view the answer. With the "+" button, users can create a new flashcard. With the pencil button, users can edit the content of the current flashcard.
+
+### App Walk-though
+<img src="http://g.recordit.co/F4iK0muNWq.gif" width=200><br>
+
+## Required
+- [x] User can open the creation screen
+- [x] User can cancel out of the creation screen
+- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [x] Push code to GitHub
+## Optional
+- [x] User gets an error if they try to create a new flashcard with no question or answer
+- [x] User can edit existing flashcard
+- [ ] User can add multiple choice answers in the creation screen
+
 ## Lab 1
 
 ### App Description
