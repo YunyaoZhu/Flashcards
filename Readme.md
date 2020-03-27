@@ -1,6 +1,29 @@
 ## Flashcards
 
-📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
+## Lab 4
+
+### App Description
+This app allows users to create and access digital flashcards with questions and multiple choice answers. Users can add multiple flashcards and navigate them using the "<-" and "->" buttons near the botton of the screen. The flashcards made by the user will be saved to disk. The UI is updated to enhance user experience. The app should display well across devices.
+
+
+### App Walk-though
+
+<img src="http://g.recordit.co/U6TzY10rAs.gif" width=200><br>
+
+
+## Required
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
+## Optional
+- [x] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [x] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] Correct answer in multiple choice should be random
+
+
 
 ## Lab 3
 
