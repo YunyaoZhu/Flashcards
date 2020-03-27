@@ -62,6 +62,18 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        card.alpha = 0.0
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+            self.card.alpha = 1.0
+            self.card.transform = CGAffineTransform.identity
+        })
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let navigationController = segue.destination as! UINavigationController
         
@@ -77,25 +89,72 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        if(frontLabel.isHidden == false){
-            frontLabel.isHidden = true
-        }
-        else{
-            frontLabel.isHidden = false
-        }
+        flipFlashcard()
+        
+    }
+    
+    func flipFlashcard() {
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            if(self.frontLabel.isHidden == false){
+                self.frontLabel.isHidden = true
+            }
+            else{
+                self.frontLabel.isHidden = false
+            }
+        })
+        
+    }
+    
+    func animateCardOutNext() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            self.updateLabels()
+            self.animateCardInNext()
+        })
+        
+    }
+    
+    func animateCardInNext() {
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
+        
+    }
+    
+    func animateCardInPrev() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        }, completion: { finished in
+            self.updateLabels()
+            self.animateCardOutPrev()
+        })
+        
+    }
+    
+    func animateCardOutPrev() {
+        card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity
+        })
         
     }
     
     @IBAction func didTapOnPrev(_ sender: Any) {
         currentIndex = currentIndex - 1
-        updateLabels()
+//        updateLabels()
         updateNextPrevButtons()
+        animateCardInPrev()
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
         currentIndex = currentIndex + 1
-        updateLabels()
+//        updateLabels()
         updateNextPrevButtons()
+        animateCardOutNext()
     }
     
     func updateFlashcard(question: String, answer: String){//, extraAnswerOne: String?, extraAnswerTwo: String?) {
